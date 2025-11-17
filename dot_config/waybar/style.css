@@ -79,11 +79,11 @@ window#waybar.empty #window {
 }
 
 #clock {
-    box-shadow: inset 2px 0 @blue;
+    box-shadow: inset 2px 0 @red;
 }
 
 #clock:hover {
-    color: @blue;
+    color: @red;
     background-color: @hover-black;
 }
 

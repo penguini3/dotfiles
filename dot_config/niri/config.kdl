@@ -93,7 +93,7 @@ layout {
 }
 
 layer-rule {
-    match namespace="swaybg"
+    match namespace="^wallpaper$"
     place-within-backdrop true
 }
 
@@ -103,6 +103,7 @@ overview {
     workspace-shadow {
         off
     }
+  
 }
 
 // ────────────── Startup Applications ──────────────
