@@ -32,7 +32,7 @@ window#waybar {
 
 window#waybar.empty {
     /*opacity: 0.0;*/
-    background-color: @hover-black;
+    background-color: @background;
     transition-duration: 0.5s;
     border-radius: 0px 20px 20px 0px;
 }
