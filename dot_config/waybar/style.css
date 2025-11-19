@@ -26,7 +26,7 @@ window#waybar {
     background-color: @background;
     color: @text;
     transition-property: background-color;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
     border-radius: 0px 5px 5px 0px;
 }
 
