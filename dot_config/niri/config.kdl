@@ -69,7 +69,7 @@ layout {
       proportion 1.0
   }
 
-  default-column-width { proportion 0.5; }
+  default-column-width { proportion 0.66666; }
 
   border {
       width 2
@@ -108,13 +108,12 @@ overview {
 
 // ────────────── Startup Applications ──────────────
 
-spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &"
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 // ────────────── Environment Variables ──────────────
 
 environment {
-  DISPLAY ":0"
   XDG_CURRENT_DESKTOP "niri"
   ELECTRON_OZONE_PLATFORM_HINT "auto"
   QT_QPA_PLATFORM "wayland"
@@ -202,7 +201,6 @@ window-rule {
     match app-id="com.mitchellh.ghostty"
     match app-id="kitty"
     draw-border-with-background false
-    default-column-width { proportion 0.66; }
 }
 
 window-rule {
