@@ -13,4 +13,12 @@ return {
       context = 3,
     },
   },
+
+  {
+    "preservim/vim-pencil",
+    lazy = false,
+    init = function()
+      vim.g["pencil#wrapModeDefault"] = "soft"
+    end,
+  },
 }

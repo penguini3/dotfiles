@@ -44,6 +44,7 @@
 ; (gtk_accel_path "<Actions>/ThunarActionManager/paste-2" "<Shift>Insert")
 ; (gtk_accel_path "<Actions>/ThunarStatusBar/toggle-filetype" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/close-all-windows" "<Primary><Shift>w")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/41d800c6542fe715834b237fc1cd91b3" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/create-document" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/detach-tab" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/cancel-search" "Escape")
