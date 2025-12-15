@@ -1,50 +1,50 @@
-@define-color blue              rgba(0, 240, 250, 0.8);
-@define-color green             rgba(20, 180, 112, 0.8);
-@define-color purple            rgba(141, 0, 207, 0.8);
-@define-color red               rgba(226, 36, 6, 0.8);
-@define-color orange            rgba(233, 32, 0, 0.8);
-@define-color pink              rgba(204, 00, 170, 0.8);
-@define-color lime              rgba(0, 255,  178, 0.8);
-@define-color cool_purple       rgba(175, 24, 245, 0.8);
-@define-color grey              rgba(31, 26, 45, 0.8);
+@define-color blue rgba(0, 240, 250, 0.8);
+@define-color green rgba(20, 180, 112, 0.8);
+@define-color purple rgba(141, 0, 207, 0.8);
+@define-color red rgba(226, 36, 6, 0.8);
+@define-color orange rgba(233, 32, 0, 0.8);
+@define-color pink rgba(204, 00, 170, 0.8);
+@define-color lime rgba(0, 255, 178, 0.8);
+@define-color cool_purple rgba(175, 24, 245, 0.8);
+@define-color grey rgba(31, 26, 45, 0.8);
 
-@define-color background        rgba(14, 9, 21, 1);
-@define-color text              rgba(20, 180, 180, 1);
+@define-color background rgba(14, 9, 21, 1);
+@define-color text rgba(20, 180, 180, 1);
 
-@define-color hover-black       rgba(31, 26, 45, 1);
-@define-color mute-black        rgba(14, 9, 21, 1);
+@define-color hover-black rgba(31, 26, 45, 1);
+@define-color mute-black rgba(14, 9, 21, 1);
 
 * {
-    font-family: 'Monaspace Argon NF';
-    font-size: 14px;
-    border-radius: 3px;
-    transition: 0.5s ease-out;
+  font-family: 'Monaspace Argon NF';
+  font-size: 14px;
+  border-radius: 3px;
+  transition: 0.5s ease-out;
 }
 
 window#waybar {
-    border: 2px solid #e20340;
-    background-color: @background;
-    color: @text;
-    transition-property: background-color;
-    transition: 0.5s ease-in-out;
-    border-radius: 0px 5px 5px 0px;
+  border: 2px solid #e20340;
+  background-color: @background;
+  color: @text;
+  transition-property: background-color;
+  transition: 0.5s ease-in-out;
+  border-radius: 0px 5px 5px 0px;
 }
 
 window#waybar.empty {
-    /*opacity: 0.0;*/
-    background-color: @background;
-    transition-duration: 0.5s;
-    border-radius: 0px 20px 20px 0px;
+  /*opacity: 0.0;*/
+  background-color: @background;
+  transition-duration: 0.5s;
+  border-radius: 0px 20px 20px 0px;
 }
 
 button {
-    border: none;
-    border-radius: 0;
+  border: none;
+  border-radius: 0;
 }
 
 button:hover {
-    background: inherit;
-    box-shadow: inset 2px 0px @cool_purple;
+  background: inherit;
+  box-shadow: inset 2px 0px @cool_purple;
 }
 
 #custom-powerbutton,
@@ -56,7 +56,7 @@ button:hover {
 #custom-wallpaper,
 #user,
 button,
-#window, 
+#window,
 #network,
 #custom-appmenu,
 #backlight,
@@ -64,252 +64,251 @@ button,
 #pulseaudio,
 #pulseaudio-slider,
 #battery,
-#clock { 
-    padding: 10px 0px;
-    color: @text;
-    background: transparent;
+#clock {
+  padding: 10px 0px;
+  color: @text;
+  background: transparent;
 }
 
 #window {
-    margin: 20px 0px;
+  margin: 20px 0px;
 }
 
 window#waybar.empty #window {
-    opacity: 0;
+  opacity: 0;
 }
 
 #clock {
-    box-shadow: inset 2px 0 @red;
+  box-shadow: inset 2px 0 @red;
 }
 
 #clock:hover {
-    color: @red;
-    background-color: @hover-black;
+  color: @red;
+  background-color: @hover-black;
 }
 
 window#waybar.empty #clock {
-    border-radius: 0 0 20px 0;
+  border-radius: 0 0 20px 0;
 }
 
 #pulseaudio,
 #pulseaudio-slider {
-    box-shadow: inset 2px 0px @purple;
+  box-shadow: inset 2px 0px @purple;
 }
 
 #pulseaudio.muted:hover,
 #pulseaudio:hover {
-    color: @purple;
-    transition-duration: .5s;
-    background-color: @hover-black;
+  color: @purple;
+  transition-duration: .5s;
+  background-color: @hover-black;
 }
 
 #pulseaudio.muted {
-    background-color: @mute-black;
-    color: @text;
+  background-color: @mute-black;
+  color: @text;
 }
 
 #pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
 }
 
 #pulseaudio-slider trough {
-    min-height: 60px;
-    min-width: 10px;
-    border-radius: 5px;
-    background: @hover-black;
+  min-height: 60px;
+  min-width: 10px;
+  border-radius: 5px;
+  background: @hover-black;
 }
 
 #pulseaudio-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background: @text;
+  min-width: 10px;
+  border-radius: 5px;
+  background: @text;
 }
 
 #pulseaudio-slider:hover highlight {
-    background: @purple;
+  background: @purple;
 }
 
 #backlight:hover {
-    color: @orange;
-    background-color: @hover-black;
+  color: @orange;
+  background-color: @hover-black;
 }
 
 #backlight,
 #backlight-slider {
-    box-shadow: inset 2px 0px @orange;
+  box-shadow: inset 2px 0px @orange;
 }
 
 #backlight-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
 }
 
 #backlight-slider trough {
-    min-height: 60px;
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: @hover-black;
+  min-height: 60px;
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: @hover-black;
 }
 
 #backlight-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: @text;
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: @text;
 }
 
 #backlight-slider:hover highlight {
-    background: @orange;
+  background: @orange;
 }
 
-#battery:hover, 
-#battery.charging:hover, 
+#battery:hover,
+#battery.charging:hover,
 #battery.plugged:hover {
-    color: @green;
-    transition-duration: .5s;
-    background-color: @hover-black;
+  color: @green;
+  transition-duration: .5s;
+  background-color: @hover-black;
 }
 
 #battery,
 #battery.charging,
 #battery.plugged {
-    box-shadow: inset 2px 0px @green;
+  box-shadow: inset 2px 0px @green;
 }
 
 #window:hover {
-    color: @orange;
-    background-color: @hover-black;
+  color: @orange;
+  background-color: @hover-black;
 }
 
 #window {
-    box-shadow: inset 2px 0px @orange;
+  box-shadow: inset 2px 0px @orange;
 }
 
 #taskbar button {
-    padding: 5px 0;
+  padding: 5px 0;
 }
 
 #taskbar button.active {
-    background: @mute-black;
-    box-shadow: inset 2px 0px @lime;
+  background: @mute-black;
+  box-shadow: inset 2px 0px @lime;
 }
 
 #custom-appmenu:hover {
-    color: @pink;
-    background-color: @hover-black;
+  color: @pink;
+  background-color: @hover-black;
 }
 
 #custom-appmenu {
-    box-shadow: inset 2px 0px @pink;
+  box-shadow: inset 2px 0px @pink;
 }
 
 #custom-powerbutton:hover {
-    color: @red;
-    background-color: @hover-black;
+  color: @red;
+  background-color: @hover-black;
 }
 
 #custom-powerbutton {
-    box-shadow: inset 2px 0px @red;
+  box-shadow: inset 2px 0px @red;
 }
 
 window#waybar.empty #custom-powerbutton {
-    border-radius: 0 20px 0 0;
+  border-radius: 0 20px 0 0;
 }
 
 #custom-reboot:hover {
-    color: @pink;
-    background-color: @hover-black;
+  color: @pink;
+  background-color: @hover-black;
 }
 
 #custom-reboot {
-    box-shadow: inset 2px 0px @pink;
+  box-shadow: inset 2px 0px @pink;
 }
 
 #custom-suspend:hover {
-    color: @grey;
-    background-color: @hover-black;
+  color: @grey;
+  background-color: @hover-black;
 }
 
 #custom-suspend {
-    box-shadow: inset 2px 0px @grey;
+  box-shadow: inset 2px 0px @grey;
 }
 
 #custom-lock:hover {
-    color: @blue;
-    background-color: @hover-black;
+  color: @blue;
+  background-color: @hover-black;
 }
 
 #custom-lock {
-    box-shadow: inset 2px 0px @blue;
+  box-shadow: inset 2px 0px @blue;
 }
 
 #user:hover {
-    color: @green;
-    background-color: @hover-black;
+  color: @green;
+  background-color: @hover-black;
 }
 
 #user {
-    box-shadow: inset 2px 0px @green;
+  box-shadow: inset 2px 0px @green;
 }
 
 #taskbar,
 #workspaces {
-    background: transparent;
-    border-radius: 0px;
-    margin: 10px 0px;
+  background: transparent;
+  border-radius: 0px;
+  margin: 10px 0px;
 }
 
 #workspaces button {
-    padding: 7px 0px;
-    background-color: transparent;
-    color: @text;
-    border-radius: 0px;
-    transition: 0.2s ease-in-out;
-    font-size: 15px;
+  padding: 7px 0px;
+  background-color: transparent;
+  color: @text;
+  border-radius: 0px;
+  transition: 0.2s ease-in-out;
+  font-size: 15px;
 }
 
 #workspaces button.active {
-    background-color: @mute-black;
-    border-radius: 0px;
-    font-weight: 900;
+  background-color: @mute-black;
+  border-radius: 0px;
+  font-weight: 900;
 }
 
 #workspaces button.active:hover {
-    color: @lime;
+  color: @lime;
 }
 
 #workspaces button:hover {
-    background: @hover-black;
+  background: @hover-black;
 }
 
 #workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: inset 2px 0px @lime;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 2px 0px @lime;
 }
 
 #workspaces button.urgent {
-    background-color: @red;
-    border-radius: 10px;
+  background-color: @red;
+  border-radius: 10px;
 }
 
 #custom-playpause:hover {
-    color: @pink;
-    background-color: @hover-black;
+  color: @pink;
+  background-color: @hover-black;
 }
 
 #custom-playpause {
-    box-shadow: inset 2px 0px @pink;
+  box-shadow: inset 2px 0px @pink;
 }
 
 #network.disconnected {
-    background-color: @red;
+  background-color: @red;
 }
-
