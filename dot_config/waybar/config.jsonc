@@ -15,22 +15,21 @@
     ],
 
     "modules-center": [
-        "niri/window"
+        "clock"
     ],
 
     "modules-right": [
         "network",
         "group/apps",
-        "group/stats",
-        "clock"
+        "group/stats"
     ],
 
     "clock": {
         "timezone": "America/Chicago",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d\n%m\n%y}",
-        "format": "{:%H\n%M}",
-        "interval": 60
+        "format-alt": "{:%A, %x}",
+        "format": "{:%I:%M %p}",
+        "interval": 60,
+        "rotate": 90
     },
 
     "pulseaudio": {
@@ -131,15 +130,6 @@
         }
     },
     
-    "niri/window": {
-        "tooltip": false,
-        "format": "{}",
-        "rotate": 90,
-        "rewrite": {
-            "^null$": "Desktop"
-        }
-    },
-
     "custom/appmenu": {
         "format": "󰀻",
         "on-click": "niri msg action toggle-overview",
@@ -166,13 +156,11 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " ",
+        "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        //"tooltip-format": "{ifname} via {gwaddr} ",
         "tooltip-format": "{essid}: {ipaddr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}: {essid}",
         "rotate": 90
     },
 
@@ -180,8 +168,7 @@
         "modules": [
             "custom/powerbutton",
             "custom/reboot",
-            "custom/suspend",
-            "user"
+            "custom/suspend"
         ],
         "orientation": "inherit",
         "drawer": {
@@ -205,12 +192,6 @@
         "format": "",
         "on-click": "systemctl suspend",
         "tooltip-format": "Suspend"
-    },
-
-    "user": {
-        "format": "{work_H}:{work_M}:{work_S} ↑",
-        "interval": 60,
-        "rotate": 90
     },
 
     "custom/playpause": {

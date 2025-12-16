@@ -146,3 +146,6 @@ alias mirror="sudo cachyos-rate-mirrors"                                      # 
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'                               # Cleanup orphaned packages
 alias jctl="journalctl -p 3 -xb"                                              # Get the error messages from journalctl
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" # Recent installed packages
+
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
