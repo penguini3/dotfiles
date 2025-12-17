@@ -157,7 +157,7 @@ animations {
       spring damping-ratio=0.65 stiffness=423 epsilon=0.0001
   }
   config-notification-open-close {
-      spring damping-ratio=0.45 stiffness=923 epsilon=0.001
+      spring damping-ratio=0.45 stiffness=423 epsilon=0.001
   }
   screenshot-ui-open {
       duration-ms 200
@@ -196,12 +196,9 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
     match app-id="Alacritty"
     match app-id="zen"
-    match app-id="com.mitchellh.ghostty"
-    match app-id="kitty"
-    draw-border-with-background false
+    default-column-width { proportion 0.85; }
 }
 
 
@@ -241,14 +238,16 @@ binds {
   MOD+SHIFT+ESCAPE                    { show-hotkey-overlay; }
 
   // ─── Applications ───
-  Super+Alt+L                         hotkey-overlay-title="Lock Screen" { spawn "swaylock"; }
+  MOD+ALT+L                         hotkey-overlay-title="Lock Screen" { spawn "swaylock"; }
  
   MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty"  { spawn "alacritty"; }
   MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
   MOD+E                               hotkey-overlay-title="File Manager: Thunar" { spawn "thunar"; }
 
   MOD+Space                           hotkey-overlay-title="Application Launcher" { spawn "fuzzel"; }
-  MOD+M                               hotkey-overlay-title="Task Manager" { spawn "dms" "ipc" "call" "processlist" "toggle"; }
+  MOD+M                               hotkey-overlay-title="Task Manager" { spawn-sh "alacritty -e btop"; }
+  MOD+K                               hotkey-overlay-title="BlueTUI" { spawn-sh "alacritty -e bluetui"; }
+  MOD+I                               hotkey-overlay-title="NetworkManager" {spawn "nm-connection-editor";}
 
   // ─── Audio Controls ───
   XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
@@ -264,22 +263,14 @@ binds {
   MOD+W                               { close-window; }
 
   MOD+LEFT                            { focus-column-left; }
-  MOD+H                               { focus-column-left; }
   MOD+RIGHT                           { focus-column-right; }
-  MOD+L                               { focus-column-right; }
   MOD+UP                              { focus-window-up; }
-  MOD+K                               { focus-window-up; }
   MOD+DOWN                            { focus-window-down; }
-  MOD+J                               { focus-window-down; }
 
   MOD+SHIFT+LEFT                      { move-column-left; }
-  MOD+SHIFT+H                         { move-column-left; }
   MOD+SHIFT+RIGHT                     { move-column-right; }
-  MOD+SHIFT+L                         { move-column-right; }
   MOD+SHIFT+UP                        { move-window-up; }
-  MOD+SHIFT+K                         { move-window-up; }
   MOD+SHIFT+DOWN                      { move-window-down; }
-  MOD+SHIFT+J                         { move-window-down; }
 
   MOD+Q                               { consume-window-into-column; }
   MOD+SHIFT+Q                         { expel-window-from-column; }

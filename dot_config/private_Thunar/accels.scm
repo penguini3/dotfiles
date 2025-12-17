@@ -3,7 +3,9 @@
 ;
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-type" "")
 ; (gtk_accel_path "<Actions>/ThunarStatusBar/toggle-last-modified" "")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/b1fa0163b4beda000e9afa63a72a2a30" "")
 ; (gtk_accel_path "<Actions>/Thunarwindow/menu" "")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/d2f84a6068ee05665f3ae7613d6411ec" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/cut" "<Primary>x")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-size" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/file-menu" "")
@@ -112,6 +114,7 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/show-hidden" "<Primary>h")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/set-default-app" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/empty-trash" "")
+(gtk_accel_path "<Actions>/ThunarActions/uca-action-1763408473663145-1" "<Primary>Return")
 ; (gtk_accel_path "<Actions>/ThunarWindow/preferences" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/delete" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-network" "")

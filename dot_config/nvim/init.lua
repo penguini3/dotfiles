@@ -1,6 +1,8 @@
+-- vim options
+
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
-
+vim.g.autochdir = "on"
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
@@ -30,6 +32,28 @@ require("mini.ai").setup()
 require("mini.surround").setup()
 require("mini.bracketed").setup()
 require("mini.indentscope").setup()
+
+-- load and configure neorg
+require("neorg").setup {
+  load = {
+    ["core.defaults"] = {},
+    ["core.concealer"] = {},
+    ["core.completion"] = {
+      config = { engine = "nvim-cmp", name = "[Neorg]" },
+    },
+    ["core.dirman"] = {
+      config = {
+        workspaces = {
+          academic = "~/Documents/Notes/academic/",
+          personal = "~/Documents/Notes/personal/",
+        },
+        index = "index.norg",
+      },
+    },
+
+    ["core.summary"] = {},
+  },
+}
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")

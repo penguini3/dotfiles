@@ -7,4 +7,12 @@ return {
     ---@type render.md.UserConfig
     opts = {},
   },
+
+  {
+    "nvim-neorg/neorg",
+    lazy = false,
+    dependencies = { "hrsh7th/nvim-cmp" },
+    version = "*",
+    config = true,
+  },
 }
