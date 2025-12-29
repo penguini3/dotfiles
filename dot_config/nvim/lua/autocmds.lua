@@ -9,3 +9,8 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown,tex,text",
   command = "set spell",
 })
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*.norg" },
+  command = "set conceallevel=3",
+})

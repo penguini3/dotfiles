@@ -38,9 +38,6 @@ require("neorg").setup {
   load = {
     ["core.defaults"] = {},
     ["core.concealer"] = {},
-    ["core.completion"] = {
-      config = { engine = "nvim-cmp", name = "[Neorg]" },
-    },
     ["core.dirman"] = {
       config = {
         workspaces = {

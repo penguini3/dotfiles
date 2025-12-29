@@ -1,6 +1,6 @@
 [user]
 	name = Jess Hendrix
-	email = dev@penguini3.anonaddy.me
+	email = penguini3@anchorhold.fyi 
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential

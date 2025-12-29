@@ -10,10 +10,10 @@ output "eDP-1" {
     variable-refresh-rate
 }
 
-//output "HDMI-A-1" {
-//  mode "1920x1080"
-//  scale 1
-//}
+output "HDMI-A-1" {
+  mode "1920x1080@60"
+  scale 1
+}
 
 gestures {
     hot-corners {
@@ -28,7 +28,7 @@ input {
     keyboard {
         xkb {
           layout "us" // Enables US layout
-	  options "caps:escape" // Swaps CapsLock and Esc
+	        options "caps:escape,compose:ralt" // Swaps CapsLock and Esc
         }
         numlock
     }
@@ -238,7 +238,7 @@ binds {
   MOD+SHIFT+ESCAPE                    { show-hotkey-overlay; }
 
   // ─── Applications ───
-  MOD+ALT+L                         hotkey-overlay-title="Lock Screen" { spawn "swaylock"; }
+  MOD+ALT+L                           hotkey-overlay-title="Lock Screen" { spawn "swaylock"; }
  
   MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty"  { spawn "alacritty"; }
   MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
